@@ -13,10 +13,10 @@ Then("I should see {string}", async function(content) {
 });
 
 When("I click {string}", async function(string){
-  return "pending"
+  return await this.clickOnAddContactBtn()
 });
-Then("I fill in {string} with {string}", async function(string1, string2){
-  return "pending"
+Then("I fill in {string} with {string}", async function(field, content){
+  return await this.fillFormField(field.toLowerCase(), content)
 });
 Then("I should have {int} contact in my address book", async function(int){
   return "pending"
