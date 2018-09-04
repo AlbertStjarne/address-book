@@ -1,7 +1,12 @@
-const { Given, When, Then } = require("cucumber");
+const { After, Given, When, Then } = require("cucumber");
 
-Given("I visit the site", function() {
-  return "pending";
+After(async function() {
+  return await this.closeHomePage();
+});
+
+
+Given("I visit the site", async function() {
+  return await this.openHomePage();
 });
 Then("I should see {string}", function(string) {
   return "pending";
