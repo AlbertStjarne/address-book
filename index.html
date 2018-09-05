@@ -9,10 +9,12 @@
   <title>Address book</title>
 </head>
 
-<body>
-  <h1>Contacts</h1>
-  <button class="add-contact">Add Contact</button>
+<body class="bg-green-lighter">
+  <h1 class="text-5xl">Contacts</h1>
   
+  <button class="add-contact bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full" >Add Contact</button>
+  
+
   <div class="contact-list">
    <p>You have no contacts in your address book</p>
   </div>
@@ -30,7 +32,7 @@
     <textarea id="contact-notes" name="notes" type="text"></textarea>
     <label for="twitter">Twitter</label>
     <input id="contact-twitter" name="twitter" type="text">
-    <input class="save-contact" type="submit" value="Save contact">
+    <input class="save-contact  bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full" type="submit" value="Save contact">
  </form>
  <script src="./dist/bundle.js"></script>
 </body>
