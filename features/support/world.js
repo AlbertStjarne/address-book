@@ -52,13 +52,19 @@ class AddressBookWorld {
     case 'save contact':
       return '.save-contact'
       break
-      default:
+    default:
       throw `${btnName} button is not defined`
       break
     }
   }
 
+  async pageDoesNotHaveTextContent(unexpectedContent) {
+    const pageContent = await this.page.content()
+    let actualContent = pageContent.match(unexpectedContent)
 
+    expect(actualContent).to.be.eq(null)
+  }
+  
 }
 
 setWorldConstructor(AddressBookWorld)
