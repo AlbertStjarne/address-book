@@ -62,18 +62,17 @@ Scenario: User creates multiple contacts
 ```
 
 
-Running in x
+Running in Browser
 ----
 
 ```
-$ irb
-> load 'lib/library.rb'
-> library = Library.new
-> library.collection
-> library.books_available
-> library.search('Pippi Långstrum')
-> library.lend_out_book('Pippi Långstrum')
-> library
+
+$ yarn run server
+Go to localhost:3000 in your browser
+Click Add Contact button
+Fill in contact information
+Click Save Contact button
+
 
 ```
 

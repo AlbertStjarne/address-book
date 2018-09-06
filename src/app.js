@@ -4,6 +4,10 @@ const renderContacts = () => {
  
   const contacts = JSON.parse(storage.getItem('contacts'))
 
+  function myFunction() {
+    document.getElementById("panel").style.display = "block";
+}
+
   let div = document.querySelector('.contact-list')
 
   if (contacts) {
