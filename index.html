@@ -9,32 +9,44 @@
   <title>Address book</title>
 </head>
 
-<body class="bg-green-lighter m-8">
-  <h1 class="text-5xl">Contacts</h1>
-  
-  <button class="add-contact bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 ml-4 mt-6 rounded-full" >Add Contact</button>
+<body class="bg-blue-lighter">
+  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <h1 class="block w-full text-center text-grey-darkest mb-6">Contacts</h1>
+  <button class="add-contact block bg-teal hover:bg-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 rounded-full" >Add Contact</button>
   
   <form class="new-contact-form" action="#">
-    <label for="name" placeholder="Enter contact name">Name</label>
-    <input id="contact-name" name="name" type="text">
-    <label for="email" placeholder="Email">Email</label>
-    <input id="contact-email" name="email" type="email">
-    <label for="phone" placeholder="Phone No">Phone</label>
-    <input id="contact-phone" name="phone" type="text">
-    <label for="company" placeholder="Company name">Company</label>
-    <input id="contact-company" name="company" type="text">
-    <label for="notes" placeholder="Add notes">Notes</label>
-    <textarea id="contact-notes" name="notes" type="text"></textarea>
-    <label for="twitter" placeholder="Twitter address">Twitter</label>
-    <input id="contact-twitter" name="twitter" type="text">
-    <input class="save-contact  bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 ml-4 mt-6 mb-6 rounded-full" type="submit" value="Save contact">
- </form>
+    <div class="flex flex-col mb4">
+      <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="name" placeholder="Enter contact name">Name</label>
+      <input class="border py-2 px-3 text-grey-datkest"  id="contact-name" name="name" type="text">
+    </div>
+    <div class="flex flex-col mb-4">
+      <label class="mb-2 uppercase font-bold text-lg text-grey-darkest" for="email" placeholder="Email">Email</label>
+      <input id="contact-email" name="email" type="email">
+    </div>
+    <div class="flex flex-col mb-4">
+      <label for="phone" placeholder="Phone No">Phone</label>
+      <input id="contact-phone" name="phone" type="text">
+    </div>
+    <div class="flex flex-col mb-4">
+      <label for="company" placeholder="Company name">Company</label>
+      <input id="contact-company" name="company" type="text">
+    </div>
+    <div class="flex flex-col mb-4">
+      <label for="notes" placeholder="Add notes">Notes</label>
+      <textarea id="contact-notes" name="notes" type="text"></textarea>
+    </div>
+    <div class="flex flex-col mb-4">
+      <label for="twitter" placeholder="Twitter address">Twitter</label>
+      <input id="contact-twitter" name="twitter" type="text">
+    </div>
+      <input class="save-contact block bg-teal hover:bg-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 rounded-full" type="submit" value="Save contact">
+  </form>
  <script src="./dist/bundle.js"></script>
 
- <div class="contact-list">
+   <div class="contact-list">
     <p>You have no contacts in your address book</p>
    </div>
-
+  </div>
 </body>
 
 </html>
