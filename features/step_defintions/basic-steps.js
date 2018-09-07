@@ -12,6 +12,7 @@ Then("I should see {string}", async function(content) {
   return await this.pageHasTextContent(content);
 });
 
+
 When("I click {string}", async function(string){
   return await this.clickOnButton(string)
 });

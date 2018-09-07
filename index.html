@@ -13,10 +13,10 @@
   <div class="max-w-sm bg-teal rounded overflow-hidden shadow-lg mx-auto">
     <h1 class="block w-full text-center text-grey-darkest mb-6 pt-6">Contacts</h1>
     <div class="text-center">
-      <button class="add-contact flip bg-teal-dark hover:bt-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 mb-6 rounded-full" onclick="myFunction()">Add Contact</button>
+      <button class="add-contact bg-teal-dark hover:bt-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 mb-6 rounded-full">Add Contact</button>
     </div>
     <div id="panel">
-    <form class="new-contact-form" action="#">
+    <form class="new-contact-form hidden" action="#">
       <div class="flex flex-col mb-4">
         <label class="py-2 px-3 ml-8 uppercase font-bold text-lg text-grey-darkest" for="name" placeholder="Enter contact name">Name</label>
         <input class="border py-2 px-3 w-5/6 ml-8 text-grey-darkest rounded"  id="contact-name" name="name" type="text">
@@ -42,10 +42,10 @@
         <input class="border py-2 px-3 w-5/6 ml-8 text-grey-darkest rounded" id="contact-twitter" name="twitter" type="text">
       </div>
     </div>
-        <div class="text-center">
-          <input class="save-contact bg-teal-dark hover:bg-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 mb-3 rounded-full" type="submit" value="Save contact">
-        </div>
-        </form>
+      <div class="text-center">
+        <input class="save-contact bg-teal-dark hover:bg-teal-dark text-white uppercase text-lg py-2 px-4 ml-4 mt-6 mb-3 rounded-full" type="submit" value="Save contact">
+      </div>
+      </form>
   <script src="./dist/bundle.js"></script>
 
     <div class="contact-list">
@@ -53,14 +53,4 @@
     </div>
   </div>
 </body>
-
 </html>
-
-
-
-<!--<div class="mb-4">
-    <label class="block text-grey-darker text-sm font-bold mb-2" for="name">
-      Name
-    </label>
-    <input class="shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="contact-name" type="text" placeholder="Add contact name">
-  </div>-->

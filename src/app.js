@@ -4,10 +4,6 @@ const renderContacts = () => {
  
   const contacts = JSON.parse(storage.getItem('contacts'))
 
-  function myFunction() {
-    document.getElementById("panel").style.display = "block";
-}
-
   let div = document.querySelector('.contact-list')
 
   if (contacts) {
@@ -43,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
   renderContacts()
   const addContactForm = document.querySelector('.new-contact-form')
 
+  const addContactBtn = document.querySelector(".add-contact");
+  addContactBtn.addEventListener("click", () => {
+    addContactForm.classList.remove("hidden");
+  })
+
   addContactForm.addEventListener('submit', event => {
     event.preventDefault()
 
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let contacts = JSON.parse(storage.getItem('contacts')) || []
     contacts.push(contact)
     storage.setItem('contacts', JSON.stringify(contacts))
+    addContactForm.classList.add("hidden");
     renderContacts()
     addContactForm.reset()
   })
